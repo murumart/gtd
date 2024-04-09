@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://cey51g3yen7q4"]
+
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_okiku"]
+[ext_resource type="Theme" uid="uid://co08a2cr03n28" path="res://resources/main_theme.tres" id="1_ssylt"]
+[ext_resource type="PackedScene" uid="uid://bek72t2lcaiq2" path="res://scenes/create_timer_popup.tscn" id="3_2rsdv"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ssylt")
+script = ExtResource("1_okiku")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_vertical_guides_ = [18.0, 151.0]
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Taimerid"
+horizontal_alignment = 1
+
+[node name="CreateTimerButton" type="Button" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "+"
+
+[node name="CreateTimerPopup" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/CreateTimerButton" instance=ExtResource("3_2rsdv")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Panel" type="Panel" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TimerContainer" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
