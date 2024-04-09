@@ -17,6 +17,7 @@ config/version="0.0.1"
 run/main_scene="res://scenes/main.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="Murumart"
+config/auto_accept_quit=false
 config/features=PackedStringArray("4.2", "GL Compatibility")
 run/low_processor_mode=true
 config/icon="res://icon.svg"

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/timer_box.gd" id="1_txemm"]
 
-[node name="TimerBox" type="PanelContainer"]
+[node name="TimerBox" type="PanelContainer" groups=["_save_me"]]
 custom_minimum_size = Vector2(0, 110)
 size_flags_vertical = 0
 script = ExtResource("1_txemm")

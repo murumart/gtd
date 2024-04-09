@@ -20,7 +20,8 @@ func _ready() -> void:
 					"minutes": int(minutes_le.text),
 					"hours": int(hours_le.text) ,
 					"name": "Uus taimer" if not name_line.text \
-					else name_line.text
+					else name_line.text,
+					"save_time": 0.0
 				}
 			)
 		)

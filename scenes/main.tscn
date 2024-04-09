@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cey51g3yen7q4"]
+[gd_scene load_steps=5 format=3 uid="uid://cey51g3yen7q4"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_okiku"]
 [ext_resource type="Theme" uid="uid://co08a2cr03n28" path="res://resources/main_theme.tres" id="1_ssylt"]
 [ext_resource type="PackedScene" uid="uid://bek72t2lcaiq2" path="res://scenes/create_timer_popup.tscn" id="3_2rsdv"]
+[ext_resource type="Script" path="res://resources/thing_loader.gd" id="4_taca6"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -73,3 +74,6 @@ grow_vertical = 2
 [node name="TimerContainer" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+
+[node name="ThingLoader" type="Node" parent="."]
+script = ExtResource("4_taca6")
