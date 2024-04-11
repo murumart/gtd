@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://jkifr56gkfa8"]
+
+[ext_resource type="Theme" uid="uid://co08a2cr03n28" path="res://resources/main_theme.tres" id="1_u24ll"]
+[ext_resource type="Script" path="res://scenes/note.gd" id="2_lycui"]
+
+[node name="Note" type="MarginContainer" groups=["_save_me"]]
+custom_minimum_size = Vector2(100, 0)
+offset_right = 250.0
+offset_bottom = 171.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_u24ll")
+script = ExtResource("2_lycui")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Title" type="LineEdit" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Pealkiri..."
+
+[node name="DeleteButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "x"
+
+[node name="Text" type="TextEdit" parent="PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+placeholder_text = "Märge..."
+wrap_mode = 1
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/DeleteButton" to="." method="_on_delete_button_pressed"]

@@ -1,6 +1,6 @@
 class_name Saver
 
-enum SaveSpots {TIMERS}
+enum SaveSpots {TIMERS, NOTES, NOTE_PANEL_WIDTH}
 const GTD_SAVE_PATH := "user://gtd/"
 
 

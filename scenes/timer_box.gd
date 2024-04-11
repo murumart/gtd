@@ -35,12 +35,13 @@ static func time_left_string(time: float) -> String:
 	var hours := floorf(time * 0.00027777777778)
 	var minutes := floorf(fposmod(time * 0.01666666667, 60.0))
 	var seconds := floorf(fposmod(time, 60.0))
-	return str(hours) + "." + str(minutes) + ":" + str(seconds)
+	return str(hours, ":", minutes, ":", seconds)
 
 
 func _ready() -> void:
 	pause_button.pressed.connect(func():
 		timer.paused = not timer.paused
+		pause_button.text = ">" if timer.paused else "||"
 	)
 	close_button.pressed.connect(func(): queue_free())
 	get_window().focus_entered.connect(_window_focused.bind(true))
@@ -60,7 +61,7 @@ func _ready() -> void:
 	)
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	progress_bar.value = timer.time_left / _timer_length
 	time_left_label.text = TimerBox.time_left_string(timer.time_left)
 
