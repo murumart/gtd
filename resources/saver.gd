@@ -11,8 +11,8 @@ static func _static_init() -> void:
 
 static func save(tree: SceneTree, profile: int) -> void:
 	var save_dict := {}
-	tree.call_group("_save_me", "_save_me", save_dict)
 	save_dict[SaveSpots.HEADER] = "GTD SAVE FILE by: xXxMurumartxXx"
+	tree.call_group("_save_me", "_save_me", save_dict)
 	write_dict_to_file(save_dict, str("profile_", profile))
 	print(save_dict)
 
