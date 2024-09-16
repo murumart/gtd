@@ -30,5 +30,3 @@ func _ready() -> void:
 	cancel_button.pressed.connect(func():
 		hide()
 	)
-
-

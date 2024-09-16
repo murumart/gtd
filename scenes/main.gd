@@ -14,6 +14,3 @@ func _notification(what: int) -> void:
 		NOTIFICATION_WM_CLOSE_REQUEST:
 			Saver.save(get_tree(), profile)
 			get_tree().quit()
-
-
-

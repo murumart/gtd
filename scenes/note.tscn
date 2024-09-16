@@ -8,7 +8,6 @@ custom_minimum_size = Vector2(100, 0)
 offset_right = 250.0
 offset_bottom = 171.0
 size_flags_horizontal = 3
-size_flags_vertical = 3
 theme = ExtResource("1_u24ll")
 script = ExtResource("2_lycui")
 
@@ -23,7 +22,7 @@ layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_vertical = 0
 
 [node name="Title" type="LineEdit" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true

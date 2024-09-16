@@ -78,4 +78,3 @@ func _save_me(save_dict: Dictionary) -> void:
 		_Ss.TIMER_LENGTH: _timer_length,
 		_Ss.TIMER_NAME: name_line.text
 	})
-

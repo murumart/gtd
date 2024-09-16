@@ -75,9 +75,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TimerContainer" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer/TimersContainer/Panel/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer/HBoxContainer/TimersContainer/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="TimerContainer" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer/TimersContainer/Panel/MarginContainer/ScrollContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="NotesContainer" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer" node_paths=PackedStringArray("thing_loader") groups=["_save_me"]]
 custom_minimum_size = Vector2(120, 0)
